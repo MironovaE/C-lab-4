@@ -37,7 +37,7 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 			count--;
 			flag = OUT; // вышли из слова
 		}
-		else if ((buf[count][cn] == '\0' || buf[count][cn] == ' ') && (j = 1))//вне слова(после слова, когда встречаем пробел, а строка уже закончилась)
+		else if ((buf[count][cn] == '\0' || buf[count][cn] == ' ') && (j == 1))//вне слова(после слова, когда встречаем пробел, а строка уже закончилась)
 		{
 			out[i] = '\0';
 		//	i++;
@@ -49,7 +49,7 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 	return out;
 }
 
-int word(char in[N], char out[N])//нахождение слова и запись адреса первых символов каждого слова
+void word(char *in, char out)//нахождение слова и запись адреса первых символов каждого слова
 {
 	while (in[i])
 		{
@@ -68,5 +68,5 @@ int word(char in[N], char out[N])//нахождение слова и запись адреса первых симво
 		}
 		flag = OUT;
 		i = 0;
-		return buf;
+		//return buf;
 }

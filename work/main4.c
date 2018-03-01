@@ -3,6 +3,7 @@
 #include <string.h>
 #include "task1.c"
 #include "task4.h"
+#define _CRT_SECURE_NO_WARNINGS
 #define N 100
 
 int main()
@@ -17,11 +18,11 @@ int main()
 		puts("File not found!");
 		return 1;
 	}
-	char *str[N] = { buf };
+	char *str[N];
 	int i = 0; // количество строк
 	while (fgets(buf[i], N, fp))
 	{
-		str[i] = buf + i;
+		str[i] = *(buf + i);
 		if (buf[i][strlen(buf[i]) - 1] == '\n')
 			buf[i][strlen(buf[i]) - 1] = '\0';
 		i++;
