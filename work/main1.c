@@ -8,21 +8,18 @@
 int main()
 {
 	char buf[N][N];
-	const char *pstr[N];
+	char *pstr[N];
 	int j = 0;
 
 	printf("Please, enter no more than 20 lines:\n");
-
-	while (buf[j - 1][0] != '\n' && j <= 20)// пока не будет введена пустая строка с элементом "\n" и размером 0
+	do
 	{
 		pstr[j] = fgets(buf[j], N - 1, stdin);
-
 		j++;
-
-	}
+	} while (buf[j - 1][0] != '\n' && j < N);// пока не будет введена пустая строка с элементом "\n" и размером 0
 
 	lineSort(pstr, j);
-	printLines(pstr, j);
+	printLines((const char**)pstr, j);
 
 	return 0;
 }
