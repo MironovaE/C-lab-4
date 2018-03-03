@@ -4,11 +4,12 @@
 #include "task1.h"
 #include "task4.h"
 #define _CRT_SECURE_NO_WARNINGS
-#define N 100
+#define SIZE 1000
+
 
 int main()
 {
-	char buf[N][N] = { 0 };
+	char buf[SIZE][SIZE] = { 0 };
 	
 	FILE *fp, *in;
 	in = fopen("reading.txt", "rt");
@@ -18,9 +19,9 @@ int main()
 		puts("File not found!");
 		return 1;
 	}
-	char *pstr[N];
+	char *pstr[SIZE];
 	int j = 0; // количество строк
-	while (fgets(buf[j], N, in))
+	while (fgets(buf[j], SIZE, in))
 	{
 		pstr[j] = *(buf + j);
 		if (buf[j][strlen(buf[j]) - 1] == '\n')
