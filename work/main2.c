@@ -10,13 +10,12 @@ int main()
 
 	printf("Please, enter a line:\n");
 	fgets(in, N, stdin);
-
 	if (in[strlen(in) - 1] == '\n')
 	{
 		in[strlen(in) - 1] = '\0';
 	}
 
-	word( *in, out);
+	word(in);
 	reverseWords(in, out);
 
 	printf("% s\n", out);

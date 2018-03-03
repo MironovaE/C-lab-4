@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
-#define N 30
-#define IN 1
-#define OUT 0
+
 
 char *buf[N]; //массив указателей
 int flag = OUT;
@@ -40,8 +38,6 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 		else if ((buf[count][cn] == '\0' || buf[count][cn] == ' ') && (j == 1))//вне слова(после слова, когда встречаем пробел, а строка уже закончилась)
 		{
 			out[i] = '\0';
-		//	i++;
-		//	cn = 0; 
 			j--;
 			flag = OUT; // вышли из слова
 		}
@@ -49,7 +45,7 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 	return out;
 }
 
-void word(char *in, char out)//нахождение слова и запись адреса первых символов каждого слова
+void word(char in[N]) //нахождение слова и запись адреса первых символов каждого слова
 {
 	while (in[i])
 		{
@@ -68,5 +64,4 @@ void word(char *in, char out)//нахождение слова и запись адреса первых символов 
 		}
 		flag = OUT;
 		i = 0;
-		//return buf;
 }
