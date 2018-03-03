@@ -18,7 +18,7 @@ int main()
 		puts("File not found!");
 		return 1;
 	}
-	char *pstr[N];
+	const char *pstr[N];
 	int j = 0; // количество строк
 	while (fgets(buf[j], N, fp))
 	{

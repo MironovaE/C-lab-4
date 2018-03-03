@@ -8,7 +8,7 @@
 int main()
 {
 	char buf[N][N];
-	char *pstr[N];
+	const char *pstr[N];
 	int j = 0;
 
 	printf("Please, enter no more than 20 lines:\n");
