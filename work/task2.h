@@ -3,4 +3,4 @@
 #define OUT 0
 
 char * reverseWords(char * in, char *out);
-void word(char in[SIZE]);
+void word(char *in);

@@ -45,7 +45,7 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 	return out;
 }
 
-void word(char in[SIZE]) //нахождение слова и запись адреса первых символов каждого слова
+void word(char *in) //нахождение слова и запись адреса первых символов каждого слова
 {
 	while (in[i])
 		{
