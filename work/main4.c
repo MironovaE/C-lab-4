@@ -18,17 +18,17 @@ int main()
 		puts("File not found!");
 		return 1;
 	}
-	char *str[N];
+	char *pstr[N];
 	int i = 0; // количество строк
 	while (fgets(buf[i], N, fp))
 	{
-		str[i] = *(buf + i);
+		pstr[i] = *(buf + i);
 		if (buf[i][strlen(buf[i]) - 1] == '\n')
 			buf[i][strlen(buf[i]) - 1] = '\0';
 		i++;
 	}
-	lineSort(str, i);
-	printLinesToFile(str, i, in);
+	lineSort(pstr, i);
+	printLinesToFile(pstr, i, in);
 	return 0;
 }
 

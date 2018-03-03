@@ -7,21 +7,21 @@
 int main()
 {
 	char buf[N][N];
-	char *str[N];
+	char *pstr[N];
 	int i = 0;
 
 	printf("Please, enter no more than 20 lines:\n");
 
 	while (buf[i - 1][0] != '\n' && i <= 20)// пока не будет введена пустая строка с элементом "\n" и размером 0
 	{
-		str[i] = fgets(buf[i], N, stdin);
+		pstr[i] = fgets(buf[i], N, stdin);
 
 		i++;
 
 	}
 
-	lineSort(str, i);
-	printLines(str, i);
+	lineSort(pstr, i);
+	printLines(pstr, i);
 
 	return 0;
 }

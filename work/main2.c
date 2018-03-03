@@ -18,7 +18,7 @@ int main()
 	word(in);
 	reverseWords(in, out);
 
-	printf("% s\n", out);
+	printf("%s\n", out);
 
 	return 0;
 }
