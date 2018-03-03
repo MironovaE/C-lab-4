@@ -3,7 +3,7 @@
 #include "task2.h"
 
 
-char *buf[N]; //массив указателей
+char *buf[SIZE]; //массив указателей
 int flag = OUT;
 int i = 0, j = 0; 
 int count = 0;
@@ -45,7 +45,7 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 	return out;
 }
 
-void word(char in[N]) //нахождение слова и запись адреса первых символов каждого слова
+void word(char in[SIZE]) //нахождение слова и запись адреса первых символов каждого слова
 {
 	while (in[i])
 		{

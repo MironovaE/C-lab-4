@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
-#define N 30
+#define M 30
 
 int main()
 {
-	char in[N] = { 0 };
-	char out[N] = { 0 };
+	char in[M] = { 0 };
+	char out[M] = { 0 };
 
 	printf("Please, enter a line:\n");
-	fgets(in, N, stdin);
+	fgets(in, M, stdin);
 	if (in[strlen(in) - 1] == '\n')
 	{
 		in[strlen(in) - 1] = '\0';
