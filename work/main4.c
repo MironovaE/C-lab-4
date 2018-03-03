@@ -21,7 +21,7 @@ int main()
 	}
 	char *pstr[SIZE];
 	int j = 0; // количество строк
-	while (fgets(buf[j], SIZE, in))
+	while (fgets(buf[j], SIZE - 1, in))
 	{
 		pstr[j] = *(buf + j);
 		if (buf[j][strlen(buf[j]) - 1] == '\n')

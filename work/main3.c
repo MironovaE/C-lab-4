@@ -8,7 +8,7 @@ int main()
 	char str[SIZE] = { 0 };
 	
 	printf("Please, enter a line:\n");
-	fgets(str, SIZE, stdin);
+	fgets(str, SIZE - 1, stdin);
 
 	if (str[strlen(str) - 1] == '\n')
 	{
