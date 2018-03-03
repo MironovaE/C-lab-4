@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include "task3.h"
-#define N 30
+#define SIZE 1000
 
 int main()
 {
-	char str[N] = { 0 };
+	char str[SIZE] = { 0 };
 	
 	printf("Please, enter a line:\n");
-	fgets(str, N, stdin);
+	fgets(str, SIZE, stdin);
 
 	if (str[strlen(str) - 1] == '\n')
 	{
