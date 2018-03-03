@@ -9,7 +9,7 @@ int main()
 	char out[SIZEM] = { 0 };
 
 	printf("Please, enter a line:\n");
-	fgets(in, SIZEM, stdin);
+	fgets(in, SIZEM - 1, stdin);
 	if (in[strlen(in) - 1] == '\n')
 	{
 		in[strlen(in) - 1] = '\0';
