@@ -19,16 +19,16 @@ int main()
 		return 1;
 	}
 	char *pstr[N];
-	int i = 0; // количество строк
-	while (fgets(buf[i], N, fp))
+	int j = 0; // количество строк
+	while (fgets(buf[j], N, fp))
 	{
-		pstr[i] = *(buf + i);
-		if (buf[i][strlen(buf[i]) - 1] == '\n')
-			buf[i][strlen(buf[i]) - 1] = '\0';
-		i++;
+		pstr[j] = *(buf + j);
+		if (buf[j][strlen(buf[j]) - 1] == '\n')
+			buf[j][strlen(buf[j]) - 1] = '\0';
+		j++;
 	}
-	lineSort(pstr, i);
-	printLinesToFile(pstr, i, in);
+	lineSort(pstr, j);
+	printLinesToFile(pstr, j, in);
 	return 0;
 }
 
