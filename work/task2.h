@@ -1,4 +1,4 @@
-#define SIZE 30
+#define SIZE 1000
 #define IN 1
 #define OUT 0
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
-#define M 30
+#define M 1000
 
 int main()
 {
