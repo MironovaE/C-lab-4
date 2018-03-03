@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
+#define SIZE 1000
+#define IN 1
+#define OUT 0
+
 
 
 char *buf[SIZE]; //массив указателей

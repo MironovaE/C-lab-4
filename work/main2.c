@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
+#define SIZEM 1000
 
 int main()
 {
-	char in[SIZE] = { 0 };
-	char out[SIZE] = { 0 };
+	char in[SIZEM] = { 0 };
+	char out[SIZEM] = { 0 };
 
 	printf("Please, enter a line:\n");
-	fgets(in, SIZE, stdin);
+	fgets(in, SIZEM, stdin);
 	if (in[strlen(in) - 1] == '\n')
 	{
 		in[strlen(in) - 1] = '\0';
