@@ -5,8 +5,6 @@
 #define IN 1
 #define OUT 0
 
-
-
 char *buf[SIZE]; //массив указателей
 int flag = OUT;
 int i = 0, j = 0; 

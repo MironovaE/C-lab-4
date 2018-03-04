@@ -23,10 +23,10 @@ int isPalindrome(char * str)//функци€, провер€юща€ str (ответ либо 0, либо 1)
 		}
 
 		else
-			return 1;
+			return 0;
 	}
 
-	return 0;
+	return 1;
 }
 
 

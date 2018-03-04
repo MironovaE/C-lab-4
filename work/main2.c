@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "task2.h"
-#define SIZEM 1000
+#define SIZEM 100
 
 int main()
 {
