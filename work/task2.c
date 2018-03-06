@@ -5,13 +5,14 @@
 #define IN 1
 #define OUT 0
 
-char *buf[SIZE]; //массив указателей
 int flag = OUT;
-int i = 0, j = 0; 
-int count = 0;
 
 char * reverseWords(char * in, char *out)// функция, переворачивающая слова из in и записывающую их в out
 {
+	char *buf[SIZE]; //массив указателей
+	int i = 0, j = 0;
+	int count = 0;
+	word(in, buf, &i, &j, &count);
 	int cn = 0; // "буква слова" в одном элементе в массиве указателей 
 	while (j)	//  счетчик количества слов в out
 	{
@@ -47,23 +48,23 @@ char * reverseWords(char * in, char *out)// функция, переворачивающая слова из i
 	return out;
 }
 
-void word(char *in) //нахождение слова и запись адреса первых символов каждого слова
+void word(char *in, char **buf, int * i, int *j, int *count) //нахождение слова и запись адреса первых символов каждого слова
 {
-	while (in[i])
+	while (in[*i])
 		{
-			if (in[i] != ' ' && flag == OUT)
+			if (in[*i] != ' ' && flag == OUT)
 			{
-				buf[j] = &in[i];
-				j++;		// счетчик элементов в buf и счетчик количества слов в in
+				buf[*j] = &in[*i];
+				(*j)++;		// счетчик элементов в buf и счетчик количества слов в in
 				flag = IN;	//вошли в слово
 			}
-			else if (in[i] == ' ' && flag == IN)
+			else if (in[*i] == ' ' && flag == IN)
 			{
 				flag = OUT; // вышли из слова
-				count++;	//счетчик индекса элемента;
+				(*count)++;	//счетчик индекса элемента;
 			}
-			i++;
+			(*i)++;
 		}
 		flag = OUT;
-		i = 0;
+		*i = 0;
 }

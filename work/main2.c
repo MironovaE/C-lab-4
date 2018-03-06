@@ -15,7 +15,7 @@ int main()
 		in[strlen(in) - 1] = '\0';
 	}
 
-	word(in);
+	void word(char *in, char **buf, int * i, int *j, int *count);
 	reverseWords(in, out);
 
 	printf("%s\n", out);
